@@ -26,6 +26,7 @@ Element providing a service for checking a user permission
   <script>
     (function() {
         var ipws = undefined;
+        var ipwsConnected = false;
 
         Polymer("fd-ispermitted", {
             /**
@@ -37,7 +38,12 @@ Element providing a service for checking a user permission
              */
             auto: true,
             allowed: false,
-            connected: false,
+            get connected(){
+              return ipwsConnected;
+            },
+            set connected(val){
+              ipwsConnected=val;
+            },
             get service() {
               return ipws;
             },
@@ -68,12 +74,12 @@ Element providing a service for checking a user permission
           handleMessage: function(e) {
             var det = JSON.parse(e.detail);
             if (det.permission == this.permission) {
-              // console.log("PERMISSION CHECK:", det);
+              console.log("PERMISSION CHECK:", det);
               this.allowed = det.allowed;
             }
           },
           permissionChanged: function() {
-            // console.log("NEWPERMISSION:", this.permission);
+            console.log("NEWPERMISSION:", this.permission);
             if (this.connected) {
               // console.log("SENDING ON PERMISSIONCHANGE", this.permission);
               this.service.send(this.permission);
