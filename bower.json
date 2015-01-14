@@ -1,0 +1,7 @@
+{
+  "name": "fd-polymer-ispermitted#gh-pages",
+  "private": true,
+  "dependencies": {
+    "fd-polymer-ispermitted": "freedomotic/fd-polymer-ispermitted#master"
+  }
+}

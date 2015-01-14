@@ -1,0 +1,41 @@
+{
+  "name": "fd-polymer-ispermitted",
+  "keywords": [
+    "seed",
+    "polymer",
+    "web-components",
+    "freedomotic"
+  ],
+  "main": "fd-polymer-ispermitted.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5.2",
+    "fd-polymer-ws-service": "~0.1.8"
+  },
+  "devDependencies": {
+    "polymer-test-tools": "Polymer/polymer-test-tools#^0.5.2"
+  },
+  "authors": [
+    "Matteo Mazzoni <matteo@bestmazzo.it>"
+  ],
+  "description": "Element providing a service for checking a user permission",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "../",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/freedomotic/fd-polymer-ispermitted",
+  "_release": "7496252993",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "7496252993de9d8550d7186218b96dde99187d6f"
+  },
+  "_source": "git://github.com/freedomotic/fd-polymer-ispermitted.git",
+  "_target": "master",
+  "_originalSource": "freedomotic/fd-polymer-ispermitted",
+  "_direct": true
+}
