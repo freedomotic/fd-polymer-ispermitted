@@ -1,6 +1,6 @@
 {
   "name": "fd-polymer-ispermitted",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "keywords": [
     "seed",
     "polymer",
@@ -9,7 +9,7 @@
   ],
   "main": "fd-polymer-ispermitted.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^0.5.2",
+    "polymer": "Polymer/polymer#^0.5.4",
     "fd-polymer-ws-service": "~0.1.8"
   },
   "devDependencies": {

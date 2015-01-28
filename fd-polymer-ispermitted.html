@@ -17,7 +17,7 @@ Element providing a service for checking a user permission
 @homepage http://freedomotic.github.io/fd-polymer-ispermitted
 -->
 
-<polymer-element name="fd-ispermitted" attributes="permission">
+<polymer-element name="fd-ispermitted" attributes="permission allowed">
   <template>
     <template if="{{allowed}}">
       <content></content>
@@ -74,12 +74,12 @@ Element providing a service for checking a user permission
           handleMessage: function(e) {
             var det = JSON.parse(e.detail);
             if (det.permission == this.permission) {
-              console.log("PERMISSION CHECK:", det);
+              // console.log("PERMISSION CHECK:", det);
               this.allowed = det.allowed;
             }
           },
           permissionChanged: function() {
-            console.log("NEWPERMISSION:", this.permission);
+            // console.log("NEWPERMISSION:", this.permission);
             if (this.connected) {
               // console.log("SENDING ON PERMISSIONCHANGE", this.permission);
               this.service.send(this.permission);
